@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatMaui.AttachmentPopup"
+             RowSpacing="24" 
+             ColumnSpacing="26" 
+             Margin="0,20,0,0"
+             VerticalOptions="Start">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <Grid Grid.Row="0" Grid.Column="0" RowSpacing="12" RowDefinitions="Auto,Auto" Margin="30,0,0,0">
+        <Border  HeightRequest="48" WidthRequest="48">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="12"/>
+            </Border.StrokeShape>
+            <Label Text="&#xe700;" FontFamily="ChatFontIcons"
+                                                FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Border>
+        <Label Text="Files" Grid.Row="1" FontSize="14" FontFamily="Roboto-Regular"                                         
+                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+    </Grid>
+
+    <Grid Grid.Row="0" Grid.Column="1" RowSpacing="12" RowDefinitions="Auto,Auto">
+
+        <Border HeightRequest="48" WidthRequest="48">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="12"/>
+            </Border.StrokeShape>
+            <Label Text="&#xe701;" FontFamily="ChatFontIcons"
+                                               FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Border>
+        <Label Text="Camera" Grid.Row="1" FontSize="14" FontFamily="Roboto-Regular"                                
+                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+    </Grid>
+
+    <Grid Grid.Row="0"
+                                  Grid.Column="2"
+                                  RowSpacing="12"
+                                  RowDefinitions="Auto,Auto"
+                                  Margin="0,0,30,0">
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding Path=OpenGalleryCommand}"/>
+        </Grid.GestureRecognizers>
+
+        <Border HeightRequest="48" WidthRequest="48">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="12"/>
+            </Border.StrokeShape>
+            <Label Text="&#xe702;" FontFamily="ChatFontIcons"
+                                                FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Border>
+        <Label Text="Gallery" Grid.Row="1" FontSize="14" FontFamily="Roboto-Regular"                                       
+                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+    </Grid>
+
+    <Grid Grid.Row="1"
+                                  Grid.Column="0"
+                                  RowSpacing="12"
+                                  RowDefinitions="Auto,Auto"
+                                  Margin="30,0,0,0">
+        <Border HeightRequest="48" WidthRequest="48" >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="12"/>
+            </Border.StrokeShape>
+            <Label Text="&#xe703;" FontFamily="ChatFontIcons"
+                                                FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Border>
+        <Label Text="Audio" Grid.Row="1" FontSize="14" FontFamily="Roboto-Regular"                                    
+                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+    </Grid>
+
+    <Grid Grid.Row="1" Grid.Column="1" RowSpacing="12" RowDefinitions="Auto,Auto">
+        <Border HeightRequest="48" WidthRequest="48">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="12"/>
+            </Border.StrokeShape>
+            <Label Text="&#xe704;" FontFamily="ChatFontIcons"
+                                                FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Border>
+        <Label Text="Contacts" Grid.Row="1" FontSize="14" FontFamily="Roboto-Regular"                                
+                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+    </Grid>
+</Grid>

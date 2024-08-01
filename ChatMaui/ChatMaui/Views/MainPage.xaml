@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ChatMaui"
+             xmlns:sfchat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             x:Class="ChatMaui.MainPage">
+    
+    <!--<ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>-->
+
+    <ContentPage.Behaviors>
+        <local:PageBehavior/>
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+
+        <sfchat:SfChat x:Name="sfChat"
+                           Messages="{Binding Messages}"
+                           CurrentUser="{Binding CurrentUser}"
+                           ShowAttachmentButton="True"/>
+
+
+    </ContentPage.Content>
+
+</ContentPage>
