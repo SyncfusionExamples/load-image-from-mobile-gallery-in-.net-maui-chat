@@ -5,18 +5,11 @@
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
         }
 
-        //public static IServiceProvider ServiceProvider { get; private set; }
-
-        //public App(IServiceProvider serviceProvider)
-        //{
-        //    InitializeComponent();
-        //    ServiceProvider = serviceProvider;
-
-        //    MainPage = new MainPage();
-        //}
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new MainPage());
+        }
     }
 }
